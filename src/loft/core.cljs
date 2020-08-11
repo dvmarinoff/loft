@@ -7,7 +7,7 @@
    ["react-slick" :default Slider]
    ))
 
-;; Test Setup
+;; Test REPL Setup
 ;; (+ 3 4)
 
 (xf/reg-sub :db/primer (fn [] (:primer (xf/<- [::xf/db]))))
@@ -241,15 +241,13 @@ Now they are forming a number of weak places."]
        [:img.product-image {:src "images/weber-prim-801.png"}]
        [:p.t1.product-description "Clean the loose material as much as posible and prime the surface with this."]
        [product-cost primer]
-       [:div.product-links
-        ;; [:a.btn {:href (-> primer :link :main)} "docs"]
-        [:a.btn {:href (-> primer :link :main)} "site"]]
        ]
 
       [:div.product
        [:h3.h3 "Step 2: Laying down a new surface"]
        [:h3.a [:a {:href (-> base :link :main)} "Weber Floor Basic"]]
-       [:img.product-image {:src "images/weber-floor-basic.png"}]
+       [:a {:href (-> base :link :docs) :target "_blank"}
+        [:img.product-image {:src "images/weber-floor-basic.png"}]]
        [:p.t1.product-description "Fill the gaps, raise the floor with about 1cm and do some basic leveling of the surface. Layer ~10mm."]
        [product-cost base]
        ]
@@ -257,7 +255,8 @@ Now they are forming a number of weak places."]
       [:div.product
        [:h3.h3 "Step 3: Leveling the floor"]
        [:h3.a [:a {:href (-> nivel :link :main)} "Weber Floor 4010"]]
-       [:img.product-image {:src "images/weber-floor-4010.png"}]
+       [:a {:href (-> nivel :link :docs) :target "_blank"}
+        [:img.product-image {:src "images/weber-floor-4010.png"}]]
        [:p.t1.product-description "Use this to achieve a pricise levelling of the floor. Layer 3 to 5 mm."]
        [product-cost nivel]
        ]
@@ -343,3 +342,4 @@ Now they are forming a number of weak places."]
   (prn "stop"))
 
 (defn reload [] (prn "reload"))
+

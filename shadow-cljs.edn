@@ -5,15 +5,16 @@
  {:app {:target :browser
         :output-dir "resources/public/js/"
         :asset-path "/js/"
-        :modules {:main {:entries [loft.core]}}
-        :release {:compiler-options
-                  {:optimizations :simple
-                   :infer-externs :auto
-                   }}
 
-        :devtools {
-                   :repl-pprint true
+        :modules {:main {:entries [loft.core]}}
+
+        :release {:compiler-options
+                  {:optimizations :advanced
+                   :infer-externs :auto}}
+
+        :devtools {:repl-pprint true
                    :before-load loft.core/stop
                    :after-load  loft.core/start
+                   :preloads    [devtools.preload]
                    }}}}
 
