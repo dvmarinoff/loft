@@ -1,0 +1,30 @@
+{:paths ["src" "resources"]
+
+ :deps
+ {org.clojure/clojure          {:mvn/version "1.10.1"}
+
+  org.clojure/tools.deps.alpha {:git/url "https://github.com/clojure/tools.deps.alpha.git"
+                                :sha     "d0b33e0d346736aa985c150145b332f97b92135e"}
+  thheller/shadow-cljs         {:mvn/version "2.10.21"}
+
+  binaryage/devtools           {:mvn/version "0.9.10"}
+
+  org.clojure/clojurescript    {:mvn/version "1.10.773"}
+
+  mount                        {:mvn/version "0.1.16"}
+
+  uix.core                     {:git/url   "https://github.com/roman01la/uix.git"
+                                :deps/root "core"
+
+                                :sha
+                                "fc98f57a01d16228e709fb1ad4c2a504c65964d3"
+                                }
+  uix.dom                      {:git/url   "https://github.com/roman01la/uix.git"
+                                :deps/root "dom"
+                                :sha
+                                "fc98f57a01d16228e709fb1ad4c2a504c65964d3"
+                                }
+
+
+  }
+ }
